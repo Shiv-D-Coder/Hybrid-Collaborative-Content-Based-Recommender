@@ -25,8 +25,15 @@ The final recommendations are a combination of these two methods, leveraging bot
   - `rating`: User's rating for the exercise
   
 Assumptions:
-- Data should include user ratings or some measure of preference for exercises.
-- The dataset should cover diverse exercise categories, difficulty levels, and cultural contexts.
+- **User Feedback Loop:** User data collection and feedback for each exercise are already taken care of, and the data is appended to the existing dataset. This ensures that the data is continuously updated as users interact with the system(Assumed).
+  
+- **Model Retraining:** After a certain period or once enough new data has been collected, the model is retrained on the updated dataset. This process ensures the model provides better and more personalized recommendations over time, as it adapts to evolving user preferences(Assumed).
+
+- Data should include user ratings or some measure of preference for exercises(On scale of 5).
+
+- Here, the data is synthetically generated and consists of a very small dataset.
+
+- In this setup, each exercise_id is associated with a single cultural_context, meaning that each exercise_id corresponds to only one cultural_context(Ex 101 -> Anime).
 
 ## Model Architecture
 
